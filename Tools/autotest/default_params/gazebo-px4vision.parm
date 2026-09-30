@@ -1,3 +1,17 @@
-# px4vision is X frame
-FRAME_CLASS	1
-FRAME_TYPE	1
+# FIRE PX4 Vision: Quad-X with ArduPilotPlugin COMMAND -> motor mux.
+FRAME_CLASS      1
+FRAME_TYPE       1
+
+# Motor 1..4 map to Gazebo rotor_0..3.
+SERVO1_FUNCTION  33
+SERVO2_FUNCTION  34
+SERVO3_FUNCTION  35
+SERVO4_FUNCTION  36
+
+# Match servo_min / servo_max in default_fire_px4vision.sdf.
+MOT_PWM_TYPE     0
+MOT_PWM_MIN      1000
+MOT_PWM_MAX      2000
+
+# The ArduPilot world uses 1 ms physics steps and a 1000 Hz IMU.
+SCHED_LOOP_RATE  400
